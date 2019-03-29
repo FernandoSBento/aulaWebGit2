@@ -1,0 +1,33 @@
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+</head>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+<br><br>
+
+        <div class="">
+          <form>
+              <input type="text" name="nome"[(ngModel)] = "nome">
+
+              <button type="button" name="button" (click) = "adicionar()">add</button>
+          </form>
+
+<br><br>
+
+          <table>
+              <tr *ngFor="let nome of nomes; let i = index">
+                 <td>{{nome}}</td>
+                 <td> <button type="button" name="button" class="fas fa-trash-alt" (click) = "excluir(i)"></button> </td>
+                 <td> <button type="button" name="button" (click)="alterar(i)">Alterar</button></td>
+              </tr>
+
+          </table>
+
+
+        </div>
+
+    </div>
+</div>

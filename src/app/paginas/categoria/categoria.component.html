@@ -1,0 +1,48 @@
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+</head>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+<br><br><br>
+            <div class="">
+              <form>
+                  <label for="">Nome: </label>
+                  <input type="text" name="nome"[(ngModel)] = "categoria.nome">
+
+                  <br><br><br>
+
+                  <label for="">Descricao: </label>
+                  <input type="text" name="descricao"[(ngModel)] = "categoria.descricao">
+                  <p class="text-monospace">This is in monospace</p>
+
+
+<br><br><br>
+
+                  <button type="button" name="button" (click) = "adicionar()">add</button>
+              </form>
+
+            <br><br>
+
+              <table>
+                  <tr *ngFor="let cat of listaCategoria; let i = index">
+                     <td>{{cat.nome}}</td>
+                     <td>{{cat.descricao}}</td>
+                     <td> <button type="button" name="button" class="fas fa-trash-alt" (click) = "excluir(i)"></button> </td>
+                     <td> <button type="button" name="button" (click)="alterar(i)">Alterar</button></td>
+                  </tr>
+
+              </table>
+
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+</div>
